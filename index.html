@@ -129,22 +129,20 @@ footer { max-width:1160px; margin:0 auto; padding:25px 6%; display:flex; justify
   <h2>Every person’s journey is different.</h2>
   <p class="intro">A few reflections from people who previously worked with Alicia. Individual experiences vary; these stories are not a promise of a particular outcome.</p>
   <div class="cards">
-    <article class="card"><h3>Feeling supported</h3><p>“I easily understood my friend’s enthusiasm.” — Karen</p><p class="small">Karen described feeling supported by Alicia’s approach and recommended her services.</p></article>
-    <article class="card"><h3>A new perspective</h3><p>“I was able to see it for what it was.” — Jennifer</p><p class="small">Jennifer shared that tapping helped her reflect on a long-standing personal pattern.</p></article>
-    <article class="card"><h3>Open to trying</h3><p>“I didn’t know what to expect.” — Steve</p><p class="small">Steve described being initially unsure about tapping before trying a session.</p></article>
+    <article class="card"><h3>Karen Harrison’s Story</h3><p>I was referred to Alicia by a dear friend of mine who simply raved about her services, and was so impressed with Alicia that she bought me a gift certificate to try her treatments. Once I met with Alicia, I easily understood my friend's enthusiasm. Alicia is highly trained and talented in a wide variety of professional disciplines to help one navigate both internal and external physical, emotional and spiritual needs. As one example, she is a master of leveraging "tapping" solutions for healing and it absolutely works beautifully.</p><p>Certified in counseling and coaching, she has a very advanced natural intuition to quickly identify which solution and approach works best. I walked through her door with many layers of needs and she has been a miracle in my life to help me improve my overall health and welfare. I recommend her and her exceptional talents without reservation. I sincerely hope she can help you as wonderfully as she has helped me. With appreciation, Karen Harrison.</p></article>
+    <article class="card"><h3>Jennifer’s Story</h3><p>“I was introduced to tapping over 15 years ago, and at the time I wondered how something so simple could possibly help me. I filed it under &quot;that's nice, but not for me&quot;. Fast forward to last year when the world seemed to change overnight. I knew I had to care for my body in a different way in order to survive (and even thrive) and I reached out to Alicia for help. I think part of the reason I didn't want to (at first) was because I thought I would have to divulge painful family history and I really didn't want to go there. I never knew why I struggled with weight my entire life (despite endless diets and workouts) but in the very first session, she was able to unearth this pattern in my life, bring it to light and help me release it. The feeling was so overwhelming (in a good way) - it felt like an answer I had been searching for my entire life had been revealed, and I was now able to see it for what it was. My sessions with her changed the trajectory of my (physical) life and I am able to now see myself for who I truly am. This inner change has made it easy for the outer changes to take place. I have to say that if I had known it would be this easy to change, I would have tried EFT a long time ago.” — Jennifer Waller</p></article>
+    <article class="card"><h3>Steve Waller’s Story</h3><p>“I'm in my mid 50's and things have physically changed for me if you know what I mean. I resigned myself to the fact that it was just the normal aging process and considered asking my doctor for help in that department. Enter my wife, who had such a good experience with EFT (and Alicia) that she insisted I have a session with her before resorting to a little blue pill. I didn't know what to expect, felt a little uncomfortable and was sure that I was wasting money, so initially I did it to prove to my wife that this couldn't possibly help me. Alicia is very good at what she does and I immediately felt comfortable in her presence. She is like a laser beam, locating the source of the problem and fixing it. I don't know what I was expecting, but a week later my wife and I enjoyed intimacy at a level we hadn't in quite a long time.” — Steve Waller</p></article>
   </div>
-  <p class="small">Please confirm you have permission to republish these testimonials and names before making the website public.</p>
+  <p class="small">These reflections are shared with permission from past clients. Individual experiences vary, and testimonials are not a promise of a particular outcome.</p>
 </section>
 <section class="contact" id="contact">
   <div class="contact-inner">
-    <div><p class="eyebrow">Your next step</p><h2>Let’s have a friendly first conversation.</h2><p>Interested in meeting in Honolulu or connecting online? Use the contact details you add here to invite potential clients to reach out.</p><p class="small">Before publishing, replace the draft contact details with the email address and/or phone number you want clients to use.</p></div>
+    <div><p class="eyebrow">Your next step</p><h2>Let’s have a friendly first conversation.</h2><p>Interested in meeting in Honolulu or connecting online? I’d love to hear from you. Send me an email and tell me a little about what you’re looking for.</p></div>
     <div class="contact-panel">
-      <h3 style="margin-top:0;font-family:var(--site-font-heading);font-size:1.55rem">Set up your contact link</h3>
-      <p class="small">This preview lets you test the email link. The details you enter here are not saved after you close or refresh the preview.</p>
-      <label for="email">Your coaching email address</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email">
-      <label for="message">Suggested opening message</label><textarea id="message">Hello Alicia, I’d like to learn more about empowerment coaching and possible session options.</textarea>
-      <p><button class="button" id="emailBtn" type="button">Open email draft</button></p>
-      <p id="status" class="small" aria-live="polite">Enter your real email address to activate the contact button.</p>
+      <h3 style="margin-top:0;font-family:var(--site-font-heading);font-size:1.55rem">Get in touch with Alicia</h3>
+      <p>If you’d like to learn more about empowerment coaching or possible session options, email me here:</p>
+      <p><a class="button" href="mailto:tappingchannel@gmail.com?subject=Empowerment%20coaching%20inquiry">Email Alicia</a></p>
+      <p><a href="mailto:tappingchannel@gmail.com">tappingchannel@gmail.com</a></p>
     </div>
   </div>
 </section>
@@ -152,23 +150,7 @@ footer { max-width:1160px; margin:0 auto; padding:25px 6%; display:flex; justify
 <footer><span>© <span id="year"></span> Move Through It · Alicia</span><span>Empowerment Coaching & EFT Tapping · Honolulu, Hawaiʻi · In person & online</span></footer>
 </div>
 <script>
-const email = document.getElementById('email');
-const message = document.getElementById('message');
-const button = document.getElementById('emailBtn');
-const status = document.getElementById('status');
 document.getElementById('year').textContent = new Date().getFullYear();
-button.addEventListener('click', () => {
-  const address = email.value.trim();
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address)) {
-    status.textContent = 'Please enter a valid email address first.';
-    email.focus();
-    return;
-  }
-  const subject = encodeURIComponent('Empowerment coaching inquiry');
-  const body = encodeURIComponent(message.value);
-  window.location.href = `mailto:${address}?subject=${subject}&body=${body}`;
-  status.textContent = 'Your email app should open with a draft addressed to you.';
-});
 </script>
 </body>
 </html>
