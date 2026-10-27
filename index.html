@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Move Through It | Empowerment Coaching & EFT Tapping</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --site-primary: #245B53;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #F0D9B8;
+  --site-on-secondary: #273D38;
+  --site-background: #FAF7F0;
+  --site-on-background: #263A35;
+  --site-font-body: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --site-font-heading: "Georgia", "Times New Roman", serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --site-primary: #9AC7B9;
+    --site-on-primary: #102C27;
+    --site-secondary: #59452E;
+    --site-on-secondary: #FFF8EB;
+    --site-background: #172522;
+    --site-on-background: #F1F0E8;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); line-height: 1.65; }
+#app { background-color: var(--site-background); color: var(--site-on-background); min-height: 100vh; width: 100%; border-radius: 0; overflow: hidden; }
+a { color: inherit; }
+.topbar { max-width: 1160px; margin: 0 auto; padding: calc(22px * var(--site-spacing-scale)) 6%; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+.brand { font-family: var(--site-font-heading); font-size: 1.18rem; letter-spacing:.01em; font-weight: bold; }
+.nav { font-size:.9rem; display:flex; gap:24px; align-items:center; }
+.nav a { text-decoration:none; opacity:.88; }
+.nav a:hover { text-decoration:underline; }
+.hero { background:var(--site-primary); color:var(--site-on-primary); position:relative; }
+.hero-inner { max-width:1160px; margin:0 auto; padding: clamp(58px, 9vw, 108px) 6% clamp(64px, 8vw, 96px); display:grid; grid-template-columns: 1.25fr .75fr; align-items:center; gap:clamp(28px,6vw,76px); }
+.kicker { text-transform:uppercase; letter-spacing:.17em; font-size:.76rem; font-weight:700; margin:0 0 18px; }
+h1,h2,h3 { font-family:var(--site-font-heading); font-weight:500; line-height:1.12; }
+h1 { font-size:calc(clamp(2.8rem, 6.4vw, 5.25rem) * var(--site-heading-scale)); margin:0 0 24px; letter-spacing:-.035em; }
+.hero p.lede { font-size:clamp(1.08rem,1.7vw,1.28rem); max-width:600px; margin:0 0 30px; opacity:.94; }
+.button { display:inline-flex; justify-content:center; align-items:center; padding:13px 21px; border-radius:999px; background:var(--site-secondary); color:var(--site-on-secondary); font-weight:700; text-decoration:none; border:1px solid transparent; cursor:pointer; font:inherit; font-weight:700; }
+.button:hover { transform:translateY(-1px); }
+.button.outline { background:transparent; border-color:currentColor; color:inherit; margin-left:8px; }
+.hero-art { min-height:340px; position:relative; display:flex; align-items:center; justify-content:center; }
+.sun { width:min(310px, 80vw); aspect-ratio:1; border-radius:50%; background:var(--site-secondary); opacity:.98; display:flex; align-items:center; justify-content:center; position:relative; }
+.sun:before { content:""; position:absolute; inset:10%; border:1px solid var(--site-on-secondary); border-radius:50%; opacity:.35; }
+.sun svg { width:78%; height:auto; }
+.art-note { position:absolute; bottom:8px; right:4px; max-width:180px; font-family:var(--site-font-heading); font-style:italic; font-size:1.05rem; text-align:right; }
+.section { max-width:1060px; margin:0 auto; padding:calc(76px * var(--site-spacing-scale)) 6%; }
+.eyebrow { color:var(--site-primary); text-transform:uppercase; font-size:.75rem; font-weight:800; letter-spacing:.16em; margin-bottom:12px; }
+h2 { font-size:calc(clamp(2.1rem,4vw,3.25rem) * var(--site-heading-scale)); margin:0 0 20px; letter-spacing:-.025em; }
+.intro { max-width:720px; font-size:1.08rem; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:34px; }
+.card { background:light-dark(#FFFFFF,#202F2B); border:1px solid light-dark(#E5E1D7,#354640); border-radius:calc(18px * var(--site-radius-scale)); padding:26px; }
+.card .number { color:var(--site-primary); font-family:var(--site-font-heading); font-size:1.6rem; margin-bottom:12px; }
+.card h3 { font-size:1.45rem; margin:0 0 12px; }
+.card p { margin:0; opacity:.88; }
+.split { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(28px,7vw,80px); align-items:start; }
+.quote { font-family:var(--site-font-heading); font-size:clamp(1.6rem,3vw,2.35rem); line-height:1.3; border-left:3px solid var(--site-primary); padding-left:24px; margin:8px 0; }
+.soft { background:light-dark(#F0E9DD,#202F2B); }
+.list { padding-left:20px; }
+.list li { padding:5px 0; }
+.contact { background:var(--site-secondary); color:var(--site-on-secondary); }
+.contact-inner { max-width:1060px; margin:0 auto; padding:calc(70px * var(--site-spacing-scale)) 6%; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+.contact h2 { max-width:520px; }
+.contact-panel { background:light-dark(#FFF9EF,#2D3A34); color:light-dark(#263A35,#F1F0E8); padding:26px; border-radius:calc(18px * var(--site-radius-scale)); }
+label { display:block; font-size:.9rem; font-weight:700; margin:15px 0 6px; }
+input, textarea { width:100%; padding:12px 13px; font:inherit; border-radius:10px; border:1px solid light-dark(#C9C4B9,#56645D); background:light-dark(#FFFFFF,#172522); color:light-dark(#263A35,#F1F0E8); }
+textarea { min-height:95px; resize:vertical; }
+.small { font-size:.82rem; opacity:.78; }
+footer { max-width:1160px; margin:0 auto; padding:25px 6%; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.85rem; opacity:.78; }
+@media(max-width:760px) { .hero-inner,.split,.contact-inner { grid-template-columns:1fr; } .hero-art { min-height:250px; } .sun { width:230px; } .cards { grid-template-columns:1fr; } .nav { gap:12px; font-size:.82rem; } .brand { font-size:1rem; } .button.outline { margin:10px 0 0; } }
+@media(max-width:430px) { .topbar { align-items:flex-start; flex-direction:column; } .nav { flex-wrap:wrap; } }
+</style>
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <div class="brand">Move Through It · with Alicia</div>
+  <nav class="nav" aria-label="Main navigation"><a href="#approach">My approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="kicker">Tap. Adapt. Thrive. · Empowerment Coaching & EFT Tapping</p>
+      <h1>Move through what’s holding you back.</h1>
+      <p class="lede">Reconnect with your strengths. Find a little more clarity. Take your next step. Warm, practical empowerment coaching and EFT/tapping-informed support for life’s stressful moments and transitions.</p>
+      <a class="button" href="#contact">Let’s start a conversation</a>
+      <a class="button outline" href="#approach">Explore my approach</a>
+    </div>
+    <div class="hero-art" aria-label="Illustration of a rising sun over ocean waves">
+      <div class="sun"><svg viewBox="0 0 300 300" role="img" aria-label="Sun and ocean line illustration" fill="none" stroke="var(--site-on-secondary)" stroke-width="2.2" stroke-linecap="round"><path d="M65 155a85 85 0 0 1 170 0"/><path d="M150 45v-20M93 62 80 47M207 62l13-15M65 98l-20-7M235 98l20-7"/><path d="M43 174c18-13 36-13 54 0s36 13 54 0 36-13 54 0 36 13 54 0"/><path d="M34 200c20-13 40-13 60 0s40 13 60 0 40-13 60 0 40 13 60 0"/><path d="M54 226c17-10 34-10 51 0s34 10 51 0 34-10 51 0 34 10 51 0"/><path d="M80 249h140"/></svg></div>
+      <div class="art-note">Small steps can open new horizons.</div>
+    </div>
+  </div>
+</section>
+<section class="section" id="approach">
+  <p class="eyebrow">Move through it, one step at a time</p>
+  <h2>You don’t have to figure it all out at once.</h2>
+  <p class="intro">Sometimes a fresh perspective, a compassionate conversation, or a simple next step can help you see possibilities again. Coaching is a collaborative space to notice what matters to you and decide what you want to do next.</p>
+  <div class="cards">
+    <article class="card"><div class="number">01</div><h3>Confidence & clarity</h3><p>Explore what you want, identify strengths, and make choices that feel more aligned with you.</p></article>
+    <article class="card"><div class="number">02</div><h3>Life transitions</h3><p>Find your footing through change, fresh starts, or a chapter that doesn’t look the way you expected.</p></article>
+    <article class="card"><div class="number">03</div><h3>EFT / tapping-informed support</h3><p>Explore gentle tapping techniques as one possible tool for self-awareness and emotional grounding.</p></article>
+  </div>
+</section>
+<section class="soft" id="about">
+  <div class="section split">
+    <div><p class="eyebrow">Meet Alicia</p><h2>Encouragement with heart and real-life experience.</h2></div>
+    <div><p>I earned a Bachelor’s degree in Social Work from Augustana College in 1985. My people-centered background also includes healthcare, decades of hands-on client work, and EFT/tapping and empowerment coaching, which I began exploring in 2001. I came to tapping through my own personal journey, then felt inspired to share the technique with others.</p><p>I believe people deserve to be met with warmth, respect, curiosity, and encouragement—not judgment. Sessions can be in person in Honolulu or online, depending on what works best for you. We’ll start with what’s happening in your life and what you’d like to feel, understand, or change.</p><p class="small">Coaching is supportive and goal-oriented; it is not psychotherapy, medical care, or a promise of a particular result.</p></div>
+  </div>
+</section>
+<section class="section">
+  <div class="split">
+    <div class="quote">“You already have strengths. Let’s find a way to put them to work for you.”</div>
+    <div><p class="eyebrow">What a first conversation can look like</p><h2>Start simply.</h2><ul class="list"><li>Tell me what’s on your mind and what you’d like help with.</li><li>We’ll identify one or two priorities that matter to you.</li><li>We’ll discuss whether coaching feels like a good fit and what a next step could be.</li></ul><p>No pressure to have all the answers before we talk.</p></div>
+  </div>
+</section>
+<section class="section" id="testimonials">
+  <p class="eyebrow">Words from past clients</p>
+  <h2>Every person’s journey is different.</h2>
+  <p class="intro">A few reflections from people who previously worked with Alicia. Individual experiences vary; these stories are not a promise of a particular outcome.</p>
+  <div class="cards">
+    <article class="card"><h3>Feeling supported</h3><p>“I easily understood my friend’s enthusiasm.” — Karen</p><p class="small">Karen described feeling supported by Alicia’s approach and recommended her services.</p></article>
+    <article class="card"><h3>A new perspective</h3><p>“I was able to see it for what it was.” — Jennifer</p><p class="small">Jennifer shared that tapping helped her reflect on a long-standing personal pattern.</p></article>
+    <article class="card"><h3>Open to trying</h3><p>“I didn’t know what to expect.” — Steve</p><p class="small">Steve described being initially unsure about tapping before trying a session.</p></article>
+  </div>
+  <p class="small">Please confirm you have permission to republish these testimonials and names before making the website public.</p>
+</section>
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div><p class="eyebrow">Your next step</p><h2>Let’s have a friendly first conversation.</h2><p>Interested in meeting in Honolulu or connecting online? Use the contact details you add here to invite potential clients to reach out.</p><p class="small">Before publishing, replace the draft contact details with the email address and/or phone number you want clients to use.</p></div>
+    <div class="contact-panel">
+      <h3 style="margin-top:0;font-family:var(--site-font-heading);font-size:1.55rem">Set up your contact link</h3>
+      <p class="small">This preview lets you test the email link. The details you enter here are not saved after you close or refresh the preview.</p>
+      <label for="email">Your coaching email address</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+      <label for="message">Suggested opening message</label><textarea id="message">Hello Alicia, I’d like to learn more about empowerment coaching and possible session options.</textarea>
+      <p><button class="button" id="emailBtn" type="button">Open email draft</button></p>
+      <p id="status" class="small" aria-live="polite">Enter your real email address to activate the contact button.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> Move Through It · Alicia</span><span>Empowerment Coaching & EFT Tapping · Honolulu, Hawaiʻi · In person & online</span></footer>
+</div>
+<script>
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const button = document.getElementById('emailBtn');
+const status = document.getElementById('status');
+document.getElementById('year').textContent = new Date().getFullYear();
+button.addEventListener('click', () => {
+  const address = email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address)) {
+    status.textContent = 'Please enter a valid email address first.';
+    email.focus();
+    return;
+  }
+  const subject = encodeURIComponent('Empowerment coaching inquiry');
+  const body = encodeURIComponent(message.value);
+  window.location.href = `mailto:${address}?subject=${subject}&body=${body}`;
+  status.textContent = 'Your email app should open with a draft addressed to you.';
+});
+</script>
+</body>
+</html>
